@@ -2,6 +2,9 @@
 
 namespace TemperatureAPI.Helpers
 {
+    /// <summary>
+    /// Dekrypterar min temperatursträng 
+    /// </summary>
     public static class DecryptData
     {
         public static string Decrypt(string encryptedText)
@@ -18,7 +21,7 @@ namespace TemperatureAPI.Helpers
                     };
                     aes.Key = key;
 
-                    // Read the IV from the beginning of the stream
+                  
                     byte[] iv = new byte[16];
                     memoryStream.Read(iv, 0, iv.Length);
 
@@ -31,7 +34,7 @@ namespace TemperatureAPI.Helpers
                         CryptoStreamMode.Read))
                     using (StreamReader decryptReader = new StreamReader(cryptoStream))
                     {
-                        // Read the decrypted text
+            
                         string decryptedText = decryptReader.ReadToEnd();
                         return decryptedText;
                     }

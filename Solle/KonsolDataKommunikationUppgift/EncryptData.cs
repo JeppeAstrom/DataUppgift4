@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace TemperatureData
 {
+    /// <summary>
+    /// Här enkrypterar jag min data genom Aes som genererar en krypterad sträng.
+    /// </summary>
     internal static class EncryptData
     {
         public static string Encrypt(string text)

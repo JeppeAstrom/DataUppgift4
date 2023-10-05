@@ -4,6 +4,11 @@ using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 using TemperatureAPI.Helpers;
 
+/// <summary>
+/// Här börjar jag med att dependency injecta min temperature hub så jag kan använda mig utav temperaturehubmetoden: SendTemperature.
+/// Den kollar om objeketet är skapat rätt genom dess attributer. Har endast [Required] på så den kollar bara det. Om det går bra så
+/// dekrypterar jag strängen och använder mig sedan av temperature hub metoden som jag nämnde innan.
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 public class TemperatureController : ControllerBase

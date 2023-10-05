@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 using KonsolDataKommunikationUppgift;
 using TemperatureData;
 
+/// <summary>
+/// Jag genererar upp en random temperatur mellan -20 till +40 grader. Jag enkrypterar sedan temperaturen med hjälp av min EncryptData klass.
+/// Jag skapar sedan upp min TempDto som innehåller två properties: Device och encryptedtemperature. Där har jag även attributet [Required] så det måste innehålla något.
+/// Jag skickar sedan iväg min TempDto till apiet genom en http response och kollar om det gick bra eller inte med en try catch.
+/// </summary>
+
 class Program
 {
     static async Task Main(string[] args)
@@ -57,7 +63,7 @@ class Program
     private static int GenerateRandomTemperature()
     {
         Random random = new Random();
-        return random.Next(-10, 31);
+        return random.Next(-20, 40);
     }
 
     private static string EncryptTemperature(double temperature)
