@@ -1,9 +1,10 @@
-﻿using KonsolDataKommunikationUppgift;
-using Microsoft.AspNetCore.SignalR.Client;
-using System;
-using System.Linq;
+﻿using System;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Text;
 using System.Threading.Tasks;
+using KonsolDataKommunikationUppgift;
 using TemperatureData;
 
 class Program
@@ -11,58 +12,45 @@ class Program
     static async Task Main(string[] args)
     {
         string connectionID = Dns.GetHostName();
-        Console.WriteLine("Initializing the Hub connection...");
-        var hubConnection = new HubConnectionBuilder()
-            .WithUrl("https://localhost:7237/temperatureHub")
-            .WithAutomaticReconnect()
-            .Build();
+        Console.WriteLine("Initializing...");
 
-        hubConnection.Reconnecting += error =>
+        using (var httpClient = new HttpClient())
         {
-            Console.WriteLine($"Connection lost due to an error: {error}. Reconnecting...");
-            return Task.CompletedTask;
-        };
+            httpClient.BaseAddress = new Uri("https://localhost:7237/");
+            httpClient.DefaultRequestHeaders.Accept.Clear();
+            httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-        hubConnection.Reconnected += connectionId =>
-        {
-            Console.WriteLine($"Reconnected with connection Id: {connectionId}");
-            return Task.CompletedTask;
-        };
-
-        hubConnection.Closed += async (error) =>
-        {
-            Console.WriteLine($"Connection closed due to an error: {error}");
-            await Task.Delay(new Random().Next(0, 5) * 1000);
-            await hubConnection.StartAsync();
-        };
-
-        Console.WriteLine("Starting connection...");
-        await hubConnection.StartAsync();
-        Console.WriteLine("Connection established.");
-
-        while (true)
-        {
-            double temp = GenerateRandomTemperature();
-            string encryptedTemp = EncryptTemperature(temp);
-            Console.WriteLine($"Generated Temperature: {temp}°C, Sending Encrypted: {encryptedTemp}...");
-
-            TempDto tempData = new TempDto
+            while (true)
             {
-                Device = connectionID,
-                EncryptedTemperature = encryptedTemp
-            };
+                double temp = GenerateRandomTemperature();
+                string encryptedTemp = EncryptTemperature(temp);
+                Console.WriteLine($"Generated Temperature: {temp}°C, Sending Encrypted: {encryptedTemp}...");
 
-            try
-            {
-                await hubConnection.InvokeAsync("SendTemperature", tempData);
-                Console.WriteLine("Temperature data sent successfully.");
+                TempDto tempData = new TempDto
+                {
+                    Device = connectionID,
+                    EncryptedTemperature = encryptedTemp
+                };
+
+                try
+                {
+                    HttpResponseMessage response = await httpClient.PostAsJsonAsync("api/Temperature/send", tempData);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Console.WriteLine("Temperature data sent successfully.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Error sending temperature: {response.StatusCode}");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error sending temperature: {ex.Message}");
+                }
+
+                await Task.Delay(5000);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error sending temperature: {ex.Message}");
-            }
-
-            await Task.Delay(5000);
         }
     }
 

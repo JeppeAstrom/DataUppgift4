@@ -1,7 +1,7 @@
 ﻿console.log("JavaScript code is LOL.");
 
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("https://localhost:7237/temperatureHub", {
+    .withUrl("https://localhost:7237/api/temperature/send", {
         skipNegotiation: true,
         transport: signalR.HttpTransportType.WebSockets,
         mode: 'no-cors'

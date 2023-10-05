@@ -31,3 +31,7 @@ C:\Users\jespe\Downloads\DataUppgift4\Solle\ApiDataKommunikationUppgiftJesper\ob
 C:\Users\jespe\Downloads\DataUppgift4\Solle\ApiDataKommunikationUppgiftJesper\obj\Debug\net7.0\ApiDataKommunikationUppgiftJesper.pdb
 C:\Users\jespe\Downloads\DataUppgift4\Solle\ApiDataKommunikationUppgiftJesper\obj\Debug\net7.0\ApiDataKommunikationUppgiftJesper.genruntimeconfig.cache
 C:\Users\jespe\Downloads\DataUppgift4\Solle\ApiDataKommunikationUppgiftJesper\obj\Debug\net7.0\ref\ApiDataKommunikationUppgiftJesper.dll
+C:\Users\jespe\Downloads\DataUppgift4\Solle\ApiDataKommunikationUppgiftJesper\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\jespe\Downloads\DataUppgift4\Solle\ApiDataKommunikationUppgiftJesper\bin\Debug\net7.0\System.Web.Http.dll
+C:\Users\jespe\Downloads\DataUppgift4\Solle\ApiDataKommunikationUppgiftJesper\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\jespe\Downloads\DataUppgift4\Solle\ApiDataKommunikationUppgiftJesper\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
