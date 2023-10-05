@@ -75,3 +75,5 @@ C:\Users\jespe\Downloads\DataUppgift4\Solle\WebAppDataKommunikationUppgift\obj\D
 C:\Users\jespe\Downloads\DataUppgift4\Solle\WebAppDataKommunikationUppgift\obj\Debug\net7.0\WebAppDataKommunikationUppgift.pdb
 C:\Users\jespe\Downloads\DataUppgift4\Solle\WebAppDataKommunikationUppgift\obj\Debug\net7.0\WebAppDataKommunikationUppgift.genruntimeconfig.cache
 C:\Users\jespe\Downloads\DataUppgift4\Solle\WebAppDataKommunikationUppgift\obj\Debug\net7.0\ref\WebAppDataKommunikationUppgift.dll
+C:\Users\jespe\Downloads\DataUppgift4\Solle\WebAppDataKommunikationUppgift\bin\Debug\net7.0\package-lock.json
+C:\Users\jespe\Downloads\DataUppgift4\Solle\WebAppDataKommunikationUppgift\bin\Debug\net7.0\package.json

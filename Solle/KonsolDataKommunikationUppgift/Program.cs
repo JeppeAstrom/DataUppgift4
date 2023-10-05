@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
+﻿using KonsolDataKommunikationUppgift;
+using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Linq;
 using System.Net;
@@ -13,7 +14,7 @@ class Program
         Console.WriteLine("Initializing the Hub connection...");
         var hubConnection = new HubConnectionBuilder()
             .WithUrl("https://localhost:7237/temperatureHub")
-            .WithAutomaticReconnect() 
+            .WithAutomaticReconnect()
             .Build();
 
         hubConnection.Reconnecting += error =>
@@ -45,9 +46,15 @@ class Program
             string encryptedTemp = EncryptTemperature(temp);
             Console.WriteLine($"Generated Temperature: {temp}°C, Sending Encrypted: {encryptedTemp}...");
 
+            TempDto tempData = new TempDto
+            {
+                Device = connectionID,
+                EncryptedTemperature = encryptedTemp
+            };
+
             try
             {
-                await hubConnection.InvokeAsync("SendTemperature", connectionID, encryptedTemp);
+                await hubConnection.InvokeAsync("SendTemperature", tempData);
                 Console.WriteLine("Temperature data sent successfully.");
             }
             catch (Exception ex)
@@ -62,7 +69,7 @@ class Program
     private static int GenerateRandomTemperature()
     {
         Random random = new Random();
-        return random.Next(-10, 31); 
+        return random.Next(-10, 31);
     }
 
     private static string EncryptTemperature(double temperature)

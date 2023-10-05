@@ -3,12 +3,12 @@ using TemperatureAPI.Helpers;
 
 namespace ApiDataKommunkationUppgift;
 
-public class TemperatureHub:Hub
+public class TemperatureHub : Hub
 {
-	public async Task SendTemperature(string deviceId, string encryptedTemperature)
-	{
-		encryptedTemperature = DecryptData.Decrypt(encryptedTemperature);
+    public async Task SendTemperature(TempSchema tempSchema)
+    {
+        tempSchema.EncryptedTemperature = DecryptData.Decrypt(tempSchema.EncryptedTemperature);
 
-		await Clients.All.SendAsync("ReceiveTemperature", deviceId, encryptedTemperature);
-	}
+        await Clients.All.SendAsync("ReceiveTemperature", tempSchema.Device, tempSchema.EncryptedTemperature);
+    }
 }
