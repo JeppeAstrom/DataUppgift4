@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 namespace TemperatureData
 {
     /// <summary>
-    /// Här enkrypterar jag min data genom Aes som genererar en krypterad sträng.
+    /// Denna klass erbjuder en metod för att kryptera given text med AES-algoritmen. 
+    /// Krypterad data returneras som en Base64-kodad sträng.
     /// </summary>
     internal static class EncryptData
     {

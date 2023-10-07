@@ -3,8 +3,10 @@
 namespace TemperatureAPI.Helpers
 {
     /// <summary>
-    /// Dekrypterar min temperatursträng 
+    /// Denna klass har en metod för att dekryptera en Base64-kodad textsträng med AES-algoritmen.
+    /// Den ursprungliga okrypterade texten returneras om dekryptering lyckades.
     /// </summary>
+
     public static class DecryptData
     {
         public static string Decrypt(string encryptedText)

@@ -1,1 +1,0 @@
-﻿console.log("JavaScript code is executed.");

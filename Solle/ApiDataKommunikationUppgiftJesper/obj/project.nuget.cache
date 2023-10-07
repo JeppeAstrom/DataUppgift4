@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x2l4ZcVcVr4bEeGLldooEx44+arplUVU8F3dPRSaNlnpP5SPTLNZitCzJMAIQezxzUDthfZMZqDn8HJaQeG9JA==",
+  "dgSpecHash": "9V1nj6OBxE5v61Um6DD1YQl9PAKPKmd6dMz3GqYCNgXj+oFXlBJbyQKh1lKmZDWE9yhBdTSQk++2IHVfUP/Tjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jespe\\Downloads\\DataUppgift4\\Solle\\ApiDataKommunikationUppgiftJesper\\ApiDataKommunikationUppgiftJesper.csproj",
+  "projectFilePath": "C:\\Users\\jespe\\Source\\Repos\\DataUppgift4\\Solle\\ApiDataKommunikationUppgiftJesper\\ApiDataKommunikationUppgiftJesper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jespe\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\jespe\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.9\\microsoft.aspnet.webapi.core.5.2.9.nupkg.sha512",
