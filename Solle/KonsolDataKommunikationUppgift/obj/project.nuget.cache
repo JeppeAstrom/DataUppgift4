@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ewOjNaieQhug2iBY0OX2c4QmIXhW4BcMyZh+YArmjZP9L65wnLru2TpC3EZbp84QHZxiPhYNL6TQg5xuzsbsSw==",
+  "dgSpecHash": "p+k2Idbek0hOHaB2xqDNeveDj2ZTqOvC5QwYSZ4tUPqcWr5t2V/j4GmIdiqYMXF4iUD9B5WYeL3g5ic77ItgEQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jespe\\Source\\Repos\\DataUppgift4\\Solle\\KonsolDataKommunikationUppgift\\KonsolDataKommunikationUppgift.csproj",
+  "projectFilePath": "C:\\Users\\jespe\\Source\\Repos\\DataUppgift50\\Solle\\KonsolDataKommunikationUppgift\\KonsolDataKommunikationUppgift.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jespe\\.nuget\\packages\\jquery\\1.6.4\\jquery.1.6.4.nupkg.sha512",
     "C:\\Users\\jespe\\.nuget\\packages\\microsoft.aspnet.signalr\\2.4.3\\microsoft.aspnet.signalr.2.4.3.nupkg.sha512",

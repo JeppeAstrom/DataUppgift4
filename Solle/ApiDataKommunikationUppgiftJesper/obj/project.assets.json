@@ -6417,24 +6417,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jespe\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\jespe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jespe\\Source\\Repos\\DataUppgift4\\Solle\\ApiDataKommunikationUppgiftJesper\\ApiDataKommunikationUppgiftJesper.csproj",
+      "projectUniqueName": "C:\\Users\\jespe\\Source\\Repos\\DataUppgift50\\Solle\\ApiDataKommunikationUppgiftJesper\\ApiDataKommunikationUppgiftJesper.csproj",
       "projectName": "ApiDataKommunikationUppgiftJesper",
-      "projectPath": "C:\\Users\\jespe\\Source\\Repos\\DataUppgift4\\Solle\\ApiDataKommunikationUppgiftJesper\\ApiDataKommunikationUppgiftJesper.csproj",
+      "projectPath": "C:\\Users\\jespe\\Source\\Repos\\DataUppgift50\\Solle\\ApiDataKommunikationUppgiftJesper\\ApiDataKommunikationUppgiftJesper.csproj",
       "packagesPath": "C:\\Users\\jespe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jespe\\Source\\Repos\\DataUppgift4\\Solle\\ApiDataKommunikationUppgiftJesper\\obj\\",
+      "outputPath": "C:\\Users\\jespe\\Source\\Repos\\DataUppgift50\\Solle\\ApiDataKommunikationUppgiftJesper\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\jespe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6442,7 +6437,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6497,7 +6491,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
